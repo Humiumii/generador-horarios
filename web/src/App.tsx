@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { Calendar } from './Calendar'
-import { catalog, clock, days, example, gapLabel, generate } from './schedule'
+import { catalog, clock, days, example, gapLabel, generate, staticDemo } from './schedule'
 import type { Request, Schedule } from './schedule'
 
 function minutes(time: string) {
@@ -71,7 +71,7 @@ export function App() {
     <>
       <header className="top"><div className="top-inner">
         <div className="brand"><span className="mark" aria-hidden="true"><i /><i /><i /><i /></span>Cuadra</div>
-        <span>Planificador universitario</span>
+        <span>{staticDemo ? 'Demo de ejemplo · catálogo ficticio' : 'Planificador universitario'}</span>
       </div></header>
       <main>
         <div className="intro">
@@ -157,5 +157,3 @@ export function App() {
     </>
   )
 }
-
-

@@ -37,4 +37,3 @@ El estado inicial abre el ejemplo con cuatro ramos. El botón de generar aplica 
 - La alternativa activa se distingue por borde y fondo. Las transiciones de color duran 120 ms y respetan la preferencia de movimiento reducido.
 - Los estados de carga, selección vacía, error y restricciones incompatibles tienen texto propio.
 - El diseño se implementó en React a partir de estas decisiones. Google Stitch no estaba conectado.
-

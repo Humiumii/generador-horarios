@@ -101,5 +101,3 @@ select, input[type=time], .outline { background: white; border: 1px solid #a9b0c
   .day-switch button[aria-pressed=true] { background: #e9edff; border-color: var(--action); font-weight: 700; }
 }
 @media (prefers-reduced-motion: reduce) { .alternatives button { transition: none; } }
-
-

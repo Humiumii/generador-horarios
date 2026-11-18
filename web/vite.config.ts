@@ -7,4 +7,3 @@ export default defineConfig({
   server: { proxy },
   preview: { proxy },
 })
-

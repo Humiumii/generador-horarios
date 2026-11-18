@@ -1,0 +1,9 @@
+.git
+.venv
+**/__pycache__
+**/node_modules
+**/dist
+**/dist-demo
+.pytest_cache
+.playwright-cli
+docs

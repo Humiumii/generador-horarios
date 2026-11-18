@@ -54,4 +54,3 @@ export function Calendar({ schedule, busy }: { schedule: Schedule; busy: Block[]
     </>
   )
 }
-
