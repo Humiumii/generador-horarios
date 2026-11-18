@@ -8,6 +8,7 @@ export type Schedule = {
   class_days: number
 }
 export type Request = { courses: string[]; unavailable: Block[]; preference: Preference }
+export const staticDemo = import.meta.env.MODE === 'demo'
 export const catalog = catalogData
 export const days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']
 export const example: Request = {
@@ -26,6 +27,10 @@ export function gapLabel(minutes: number) {
 }
 
 export async function generate(request: Request, signal: AbortSignal): Promise<Schedule[]> {
+  if (staticDemo) {
+    const { demoSchedules } = await import('./demo')
+    return demoSchedules(request)
+  }
   const response = await fetch('/api/schedules', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -35,4 +40,3 @@ export async function generate(request: Request, signal: AbortSignal): Promise<S
   if (!response.ok) throw new Error('La API no pudo generar los horarios.')
   return response.json()
 }
-
